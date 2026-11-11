@@ -69,14 +69,6 @@ Inspector on each scene's root node, grouped the way the Unity headers were.
 - After you die the spawner stops, enemies freeze, and shots in the air hang until they time out.
 - The camera is fixed and always shows 10 units of height; the play area is whatever fits on screen.
 
-## Taking it to mobile
-
-The project already uses the Compatibility renderer, a resolution-independent
-layout and landscape orientation, and hides the Quit button on phones. What is
-still missing for a phone build is touch input (for example a virtual stick
-for movement plus tap-to-aim) and the export presets/templates for iOS or
-Android.
-
 ## Credits
 
 - Game and art: AminEdZare (original Unity project linked above).
