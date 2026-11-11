@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://mv8l0nwi5wvx"]
+
+[ext_resource type="Script" uid="uid://mw1g3jd30mv5" path="res://scripts/enemy.gd" id="1_4mpuu"]
+[ext_resource type="PackedScene" uid="uid://ct48diw2l4b3d" path="res://scenes/projectiles/red_projectile.tscn" id="2_wsh5r"]
+[ext_resource type="PackedScene" uid="uid://b2ftaes85fm1c" path="res://scenes/effects/effect_enemy_destroy.tscn" id="3_3ld4s"]
+[ext_resource type="Texture2D" uid="uid://dvk1pp2kogtgr" path="res://assets/sprites/characters/basic_enemy.png" id="4_y18r1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mpuu"]
+size = Vector2(29.6656, 29.6656)
+
+[node name="BasicEnemy" type="CharacterBody2D" unique_id=1211852778 groups=["enemy"]]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_4mpuu")
+projectile_scene = ExtResource("2_wsh5r")
+death_effect = ExtResource("3_3ld4s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1006541241]
+scale = Vector2(1.8541, 1.8541)
+texture = ExtResource("4_y18r1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=235962577]
+shape = SubResource("RectangleShape2D_4mpuu")

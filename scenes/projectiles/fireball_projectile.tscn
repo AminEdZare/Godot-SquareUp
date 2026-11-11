@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mlmtcxw7ploq"]
+
+[ext_resource type="Script" uid="uid://dvsng1hq1hjqf" path="res://scripts/enemy_projectile.gd" id="1_0xbpw"]
+[ext_resource type="PackedScene" uid="uid://bcn2gkmlh5r7m" path="res://scenes/effects/effect_fb_proj_destroy.tscn" id="2_w7ymy"]
+[ext_resource type="Texture2D" uid="uid://bacmln4gofesn" path="res://assets/sprites/projectiles/fireball_projectile.png" id="3_0mthl"]
+
+[node name="FireballProjectile" type="Area2D" unique_id=1541950240]
+z_index = 3
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_0xbpw")
+speed = 550.0
+rotation_offset_degrees = 180.0
+lifetime = 1.0
+hit_effect = ExtResource("2_w7ymy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1355967293]
+texture = ExtResource("3_0mthl")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=245689061]
+polygon = PackedVector2Array(-8, 1, 8, 3, 8, -3, -8, -1)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bmgyn6s57xpm7"]
+
+[ext_resource type="Script" uid="uid://mw1g3jd30mv5" path="res://scripts/enemy.gd" id="1_w0j8y"]
+[ext_resource type="PackedScene" uid="uid://mlmtcxw7ploq" path="res://scenes/projectiles/fireball_projectile.tscn" id="2_arqvw"]
+[ext_resource type="PackedScene" uid="uid://bg7rlcd3h8374" path="res://scenes/effects/effect_enemy_fireman_destroy.tscn" id="3_yi0hf"]
+[ext_resource type="Texture2D" uid="uid://bedlwtrw4yhex" path="res://assets/sprites/characters/hotman_enemy.png" id="4_gvf7t"]
+
+[node name="HotmanEnemy" type="CharacterBody2D" unique_id=706468894 groups=["enemy"]]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_w0j8y")
+health = 5
+regen = 3
+xp = 75
+speed = 500.0
+shot_cooldown = 0.5
+projectile_scene = ExtResource("2_arqvw")
+death_effect = ExtResource("3_yi0hf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=440145975]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_gvf7t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=226545541]
+polygon = PackedVector2Array(-1.5, -12, -12, -1.5, -12, 7.5, -7.5, 12, 7.5, 12, 12, 7.5, 12, -1.5, 1.5, -12)

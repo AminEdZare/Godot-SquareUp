@@ -1,0 +1,24 @@
+[gd_resource type="TileSet" format=3 uid="uid://cexymjr1k4so0"]
+
+[ext_resource type="Texture2D" uid="uid://c0pjvcy6u84ds" path="res://assets/tiles/zawab_trial_tiles.png" id="1_7t7fh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7t7fh"]
+texture = ExtResource("1_7t7fh")
+texture_region_size = Vector2i(216, 216)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[resource]
+tile_size = Vector2i(216, 216)
+sources/0 = SubResource("TileSetAtlasSource_7t7fh")

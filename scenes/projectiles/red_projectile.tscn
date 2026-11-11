@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ct48diw2l4b3d"]
+
+[ext_resource type="Script" uid="uid://dvsng1hq1hjqf" path="res://scripts/enemy_projectile.gd" id="1_qxmw1"]
+[ext_resource type="PackedScene" uid="uid://cbigyhbwmr54c" path="res://scenes/effects/effect_red_proj_destroy.tscn" id="2_r0kra"]
+[ext_resource type="Texture2D" uid="uid://c4fun02xkupr4" path="res://assets/sprites/projectiles/red_projectile.png" id="3_x2cko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxmw1"]
+size = Vector2(16, 7)
+
+[node name="RedProjectile" type="Area2D" unique_id=1068472307]
+z_index = 3
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_qxmw1")
+hit_effect = ExtResource("2_r0kra")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1921889085]
+texture = ExtResource("3_x2cko")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=537221337]
+shape = SubResource("RectangleShape2D_qxmw1")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cow85xuwsse07"]
+
+[ext_resource type="Script" uid="uid://cqv00g220xfo1" path="res://scripts/burst_effect.gd" id="1_s6x5w"]
+
+[sub_resource type="Gradient" id="Gradient_s6x5w"]
+offsets = PackedFloat32Array(0, 0.2706, 1)
+colors = PackedColorArray(0, 0.5607843, 0.9529412, 1, 0.2706, 0.6796, 0.9657, 0.0441, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_fjx1f"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 1.0, 1.0, 0, 0]
+point_count = 2
+
+[node name="EffectBlueProjSlowDestroy" type="Node2D" unique_id=118544477]
+script = ExtResource("1_s6x5w")
+amount = 3
+particle_size = 5.0
+max_speed = 174.52
+start_color = Color(0, 0.5607843, 0.9529412, 1)
+color_over_lifetime = SubResource("Gradient_s6x5w")
+size_over_lifetime = SubResource("Curve_fjx1f")

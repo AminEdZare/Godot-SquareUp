@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cryiiosxqvho3"]
+
+[ext_resource type="Script" uid="uid://cqv00g220xfo1" path="res://scripts/burst_effect.gd" id="1_t6i1h"]
+
+[sub_resource type="Gradient" id="Gradient_t6i1h"]
+colors = PackedColorArray(0.2010056, 0, 0.3396226, 1, 1, 0.4386792, 0.8198857, 1)
+
+[sub_resource type="Curve" id="Curve_5fddu"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.9170511, 0.43101603), -1.689752, -1.689752, 0, 0, Vector2(1, 0), 1.0, 1.0, 0, 0]
+point_count = 3
+
+[node name="EffectSpawn" type="Node2D" unique_id=821678593]
+script = ExtResource("1_t6i1h")
+shape = 1
+lifetime = 2.0
+particle_size = 40.0
+start_color = Color(0.7338443, 0.1960784, 0.8235294, 1)
+color_over_lifetime = SubResource("Gradient_t6i1h")
+size_over_lifetime = SubResource("Curve_5fddu")

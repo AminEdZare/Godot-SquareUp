@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dx3fv2lcc8phn"]
+
+[ext_resource type="Script" uid="uid://cmbx5yogemyko" path="res://scripts/main.gd" id="1_85g3d"]
+[ext_resource type="PackedScene" uid="uid://b4ydt53asfuhj" path="res://scenes/world/ground.tscn" id="2_choun"]
+[ext_resource type="PackedScene" uid="uid://3lxpsn2ggloc" path="res://scenes/player/player.tscn" id="3_ya4ey"]
+[ext_resource type="Script" uid="uid://cc1yis3phu47o" path="res://scripts/enemy_spawner.gd" id="4_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://cryiiosxqvho3" path="res://scenes/effects/effect_spawn.tscn" id="5_trceg"]
+[ext_resource type="PackedScene" uid="uid://mv8l0nwi5wvx" path="res://scenes/enemies/basic_enemy.tscn" id="6_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://bmgyn6s57xpm7" path="res://scenes/enemies/hotman_enemy.tscn" id="7_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://bv03qktwtbx3j" path="res://scenes/enemies/watermelon_enemy.tscn" id="8_jbj1t"]
+[ext_resource type="Script" uid="uid://bbmhx4fw0k1e1" path="res://scripts/game_camera.gd" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://014bqv3elitx" path="res://scenes/ui/hud.tscn" id="9_muem4"]
+
+[node name="Main" type="Node2D" unique_id=1274047752]
+script = ExtResource("1_85g3d")
+
+[node name="Ground" parent="." unique_id=215200845 instance=ExtResource("2_choun")]
+
+[node name="Player" parent="." unique_id=984932682 instance=ExtResource("3_ya4ey")]
+position = Vector2(2.8999999, 2.8999999)
+
+[node name="EnemySpawner" type="Node" parent="." unique_id=865163207]
+script = ExtResource("4_eb6dy")
+spawn_effect = ExtResource("5_trceg")
+enemies = Array[PackedScene]([ExtResource("6_a8y0u"), ExtResource("7_jkv2x"), ExtResource("8_jbj1t")])
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=398380237]
+zoom = Vector2(1.08, 1.08)
+script = ExtResource("9_choun")
+
+[node name="HUD" parent="." unique_id=1864810790 instance=ExtResource("9_muem4")]

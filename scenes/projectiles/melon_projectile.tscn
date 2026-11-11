@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cvkffb4wxui5m"]
+
+[ext_resource type="Script" uid="uid://dvsng1hq1hjqf" path="res://scripts/enemy_projectile.gd" id="1_7slb5"]
+[ext_resource type="PackedScene" uid="uid://cbigyhbwmr54c" path="res://scenes/effects/effect_red_proj_destroy.tscn" id="2_248ow"]
+[ext_resource type="Texture2D" uid="uid://dtf7uupns6skb" path="res://assets/sprites/projectiles/melon_projectile.png" id="3_4v1fs"]
+
+[node name="MelonProjectile" type="Area2D" unique_id=1179671440]
+z_index = 3
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_7slb5")
+speed = 450.0
+rotation_offset_degrees = 180.0
+lifetime = 5.0
+damage = 2
+hit_effect = ExtResource("2_248ow")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1691200284]
+texture = ExtResource("3_4v1fs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=410021545]
+polygon = PackedVector2Array(-5, -7, -8, -3, -8, 4, -5, 8, 2, 4, 8.5, 0.5, 2, -3)

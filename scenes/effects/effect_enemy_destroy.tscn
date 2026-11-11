@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b2ftaes85fm1c"]
+
+[ext_resource type="Script" uid="uid://cqv00g220xfo1" path="res://scripts/burst_effect.gd" id="1_42cj8"]
+
+[sub_resource type="Curve" id="Curve_42cj8"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 1.0, 1.0, 0, 0]
+point_count = 2
+
+[node name="EffectEnemyDestroy" type="Node2D" unique_id=1881490205]
+script = ExtResource("1_42cj8")
+max_speed = 174.52
+start_color = Color(0.2235294, 0.6627451, 0.4823529, 1)
+size_over_lifetime = SubResource("Curve_42cj8")

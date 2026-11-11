@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bv03qktwtbx3j"]
+
+[ext_resource type="Script" uid="uid://mw1g3jd30mv5" path="res://scripts/enemy.gd" id="1_4dsjg"]
+[ext_resource type="PackedScene" uid="uid://cvkffb4wxui5m" path="res://scenes/projectiles/melon_projectile.tscn" id="2_8f4e0"]
+[ext_resource type="PackedScene" uid="uid://cf4pm15exjuug" path="res://scenes/effects/effect_enemy_watermelon_destroy.tscn" id="3_62db0"]
+[ext_resource type="Texture2D" uid="uid://ctv63f7ookluu" path="res://assets/sprites/characters/watermelon_enemy.png" id="4_rxh8i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dsjg"]
+size = Vector2(48, 48)
+
+[node name="WatermelonEnemy" type="CharacterBody2D" unique_id=1210591499 groups=["enemy"]]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_4dsjg")
+health = 15
+regen = 2
+xp = 200
+speed = 300.0
+shot_cooldown = 1.5
+chase_range = 200.0
+retreat_range = 100.0
+projectile_scene = ExtResource("2_8f4e0")
+death_effect = ExtResource("3_62db0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1774283862]
+scale = Vector2(3, 3)
+texture = ExtResource("4_rxh8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=425220358]
+shape = SubResource("RectangleShape2D_4dsjg")

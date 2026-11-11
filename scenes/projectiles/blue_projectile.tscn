@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c8x7jwv4y8hg5"]
+
+[ext_resource type="Script" uid="uid://cdfrbcnwn4pjk" path="res://scripts/player_projectile.gd" id="1_3e0ml"]
+[ext_resource type="PackedScene" uid="uid://cnoimog286pmp" path="res://scenes/effects/effect_blue_proj_destroy.tscn" id="2_m8e2r"]
+[ext_resource type="PackedScene" uid="uid://cow85xuwsse07" path="res://scenes/effects/effect_blue_proj_slow_destroy.tscn" id="3_x2rid"]
+[ext_resource type="Texture2D" uid="uid://coxom1ricu46p" path="res://assets/sprites/projectiles/blue_projectile.png" id="4_jag62"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3e0ml"]
+radius = 1.0
+
+[node name="BlueProjectile" type="Area2D" unique_id=658555663]
+z_index = 3
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_3e0ml")
+hit_effect = ExtResource("2_m8e2r")
+expire_effect = ExtResource("3_x2rid")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078338708]
+texture = ExtResource("4_jag62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=913619528]
+shape = SubResource("CircleShape2D_3e0ml")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bcn2gkmlh5r7m"]
+
+[ext_resource type="Script" uid="uid://cqv00g220xfo1" path="res://scripts/burst_effect.gd" id="1_o7c5t"]
+
+[sub_resource type="Curve" id="Curve_o7c5t"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 1.0, 1.0, 0, 0]
+point_count = 2
+
+[node name="EffectFbProjDestroy" type="Node2D" unique_id=436217675]
+script = ExtResource("1_o7c5t")
+particle_size = 5.0
+max_speed = 174.52
+start_color = Color(1, 0.5568628, 0.1921569, 1)
+size_over_lifetime = SubResource("Curve_o7c5t")

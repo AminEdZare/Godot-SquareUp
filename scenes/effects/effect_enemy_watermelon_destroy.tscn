@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cf4pm15exjuug"]
+
+[ext_resource type="Script" uid="uid://cqv00g220xfo1" path="res://scripts/burst_effect.gd" id="1_qujky"]
+
+[sub_resource type="Gradient" id="Gradient_qujky"]
+offsets = PackedFloat32Array(0, 0.9088)
+colors = PackedColorArray(0.7098039, 1, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="Curve" id="Curve_2huxy"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 1.0, 1.0, 0, 0]
+point_count = 2
+
+[node name="EffectEnemyWatermelonDestroy" type="Node2D" unique_id=2042982305]
+script = ExtResource("1_qujky")
+particle_size = 40.0
+max_speed = 174.52
+start_color = Color(0.7098039, 1, 0, 1)
+color_over_lifetime = SubResource("Gradient_qujky")
+size_over_lifetime = SubResource("Curve_2huxy")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bg7rlcd3h8374"]
+
+[ext_resource type="Script" uid="uid://cqv00g220xfo1" path="res://scripts/burst_effect.gd" id="1_liosn"]
+
+[sub_resource type="Gradient" id="Gradient_liosn"]
+colors = PackedColorArray(0.9921569, 0.9098039, 0.6078432, 1, 0.7411765, 0.1098039, 0.1294118, 1)
+
+[sub_resource type="Curve" id="Curve_rg1cr"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 1.0, 1.0, 0, 0]
+point_count = 2
+
+[node name="EffectEnemyFiremanDestroy" type="Node2D" unique_id=634044072]
+script = ExtResource("1_liosn")
+max_speed = 174.52
+start_color = Color(0.9921569, 0.9098039, 0.6078432, 1)
+color_over_lifetime = SubResource("Gradient_liosn")
+size_over_lifetime = SubResource("Curve_rg1cr")

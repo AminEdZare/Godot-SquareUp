@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://014bqv3elitx"]
+
+[ext_resource type="Script" uid="uid://dluft6d4lpcg2" path="res://scripts/hud.gd" id="1_8qguk"]
+[ext_resource type="Texture2D" uid="uid://hwo2rf5h2um7" path="res://assets/sprites/ui/heart_full.png" id="2_136eg"]
+[ext_resource type="Texture2D" uid="uid://b8apwbyepdq4t" path="res://assets/sprites/ui/heart_empty.png" id="3_oj5la"]
+[ext_resource type="Theme" uid="uid://d30fu7polkf2d" path="res://assets/ui_theme.tres" id="4_gss2c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qguk"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_136eg"]
+bg_color = Color(0.78431374, 0.78431374, 0.78431374, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj5la"]
+bg_color = Color(0.9607843, 0.9607843, 0.9607843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gss2c"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1864810790]
+script = ExtResource("1_8qguk")
+full_heart = ExtResource("2_136eg")
+empty_heart = ExtResource("3_oj5la")
+
+[node name="Root" type="Control" parent="." unique_id=1937123916]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource("4_gss2c")
+
+[node name="Hearts" type="Control" parent="Root" unique_id=1953755581]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Heart1" type="TextureRect" parent="Root/Hearts" unique_id=1969207235]
+layout_mode = 0
+offset_left = 19.951359
+offset_top = 15.0513115
+offset_right = 85.64874
+offset_bottom = 80.74869
+mouse_filter = 2
+texture = ExtResource("2_136eg")
+expand_mode = 1
+
+[node name="Heart2" type="TextureRect" parent="Root/Hearts" unique_id=1933303285]
+layout_mode = 0
+offset_left = 98.45131
+offset_top = 15.0513115
+offset_right = 164.1487
+offset_bottom = 80.74869
+mouse_filter = 2
+texture = ExtResource("2_136eg")
+expand_mode = 1
+
+[node name="Heart3" type="TextureRect" parent="Root/Hearts" unique_id=1279600425]
+layout_mode = 0
+offset_left = 177.0513
+offset_top = 15.0513115
+offset_right = 242.74869
+offset_bottom = 80.74869
+mouse_filter = 2
+texture = ExtResource("2_136eg")
+expand_mode = 1
+
+[node name="Heart4" type="TextureRect" parent="Root/Hearts" unique_id=2079638062]
+layout_mode = 0
+offset_left = 255.6513
+offset_top = 15.0513115
+offset_right = 321.3487
+offset_bottom = 80.74869
+mouse_filter = 2
+texture = ExtResource("2_136eg")
+expand_mode = 1
+
+[node name="Heart5" type="TextureRect" parent="Root/Hearts" unique_id=929300878]
+layout_mode = 0
+offset_left = 334.1513
+offset_top = 15.0513115
+offset_right = 399.8487
+offset_bottom = 80.74869
+mouse_filter = 2
+texture = ExtResource("2_136eg")
+expand_mode = 1
+
+[node name="ScoreText" type="Label" parent="Root" unique_id=1368191540]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = -5.0
+offset_right = 400.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOver" type="ColorRect" parent="Root" unique_id=1402676207]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.6784314)
+
+[node name="Title" type="Label" parent="Root/GameOver" unique_id=1282854612]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -631.4624
+offset_top = -434.3132
+offset_right = 631.4624
+offset_bottom = -61.6868
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 250
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PointsText" type="Label" parent="Root/GameOver" unique_id=954034781]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -631.4624
+offset_top = -258.3132
+offset_right = 631.4624
+offset_bottom = 114.3132
+theme_override_colors/font_color = Color(0.9339623, 0.9265265, 0.101326115, 1)
+theme_override_font_sizes/font_size = 100
+text = "0 POINTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="Root/GameOver" unique_id=1937784758]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -477.95123
+offset_top = 45.409874
+offset_right = -72.04877
+offset_bottom = 184.59012
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 1, 0.08817577, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0.08817577, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 0.08817577, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 0.08817577, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 1, 0.08817577, 1)
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_8qguk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_136eg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oj5la")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gss2c")
+text = "Retry"
+
+[node name="QuitButton" type="Button" parent="Root/GameOver" unique_id=1916182230]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 72.04877
+offset_top = 45.409874
+offset_right = 477.95123
+offset_bottom = 184.59012
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 0, 0.07212782, 1)
+theme_override_colors/font_focus_color = Color(1, 0, 0.07212782, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0.07212782, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0.07212782, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0.07212782, 1)
+theme_override_font_sizes/font_size = 120
+theme_override_styles/normal = SubResource("StyleBoxFlat_8qguk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_136eg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oj5la")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gss2c")
+text = "Quit"
